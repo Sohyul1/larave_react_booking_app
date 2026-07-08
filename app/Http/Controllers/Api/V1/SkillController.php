@@ -11,7 +11,7 @@ use App\Models\Skill;
 class SkillController extends Controller
 {
     public function index (){
-        return  new SkillCollection(skill::paginate(1));
+        return  new SkillCollection(skill::all());
         }
 
     public function store(StoreSkillRequest $request){
